@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portifolio/src/core/entities/social_media_entity.dart';
 import 'package:portifolio/src/presenter/controller/social_controller.dart';
 import 'package:portifolio/src/presenter/ui/molecules/social_card.dart';
+import 'package:portifolio/src/presenter/ui/molecules/tecnology_card.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -20,27 +22,14 @@ class HomePage extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text.rich(
-                        TextSpan(
-                          children: [
-                            TextSpan(
-                                text: 'Hello welcome to my portifolio\n',
-                                style: Theme.of(context).textTheme.titleLarge),
-                            TextSpan(
-                                text: "I'm Cledson,\n",
-                                style:
-                                    Theme.of(context).textTheme.displayMedium),
-                            TextSpan(
-                                text: 'A Mobile Aplication Developper\n',
-                                style:
-                                    Theme.of(context).textTheme.displaySmall),
-                            TextSpan(
-                                text:
-                                    "I'm starting my career now as a Mobile Progamator",
-                                style: Theme.of(context).textTheme.titleLarge),
-                          ],
-                        ),
-                      ),
+                      Text('Hello welcome to my portifolio',
+                          style: Theme.of(context).textTheme.titleLarge),
+                      Text("I'm Cledson,",
+                          style: Theme.of(context).textTheme.displayMedium),
+                      Text('A Mobile Aplication Developper',
+                          style: Theme.of(context).textTheme.displaySmall),
+                      Text("I'm starting my career now as a Mobile Progamator",
+                          style: Theme.of(context).textTheme.titleLarge),
                     ],
                   ),
                   const CircleAvatar(
@@ -57,6 +46,22 @@ class HomePage extends StatelessWidget {
                   const SizedBox(height: 20),
                   Text('Technologies',
                       style: Theme.of(context).textTheme.displaySmall),
+                      SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      TecnologyCard(
+                          logo:
+                              'https://cdn-images-1.medium.com/max/1200/1*5-aoK8IBmXve5whBQM90GA.png',
+                          link:
+                              'https://tecnoblog.net/responde/o-que-e-flutter-em-programacao/'),
+                      TecnologyCard(
+                          logo:
+                              'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/dart/dart.png',
+                          link:
+                              ' https://www.hostgator.com.br/blog/o-que-e-dart-na-programacao/'),
+                    ],
+                  ),
                 ],
               ),
             )
