@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:portifolio/src/core/entities/social_media_entity.dart';
-import 'package:portifolio/src/presenter/controller/social_controller.dart';
-import 'package:portifolio/src/presenter/ui/molecules/social_card.dart';
 import 'package:portifolio/src/presenter/ui/molecules/tecnology_card.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    SocialController sc = SocialController();
     return Scaffold(
       body: SafeArea(
         child: CustomScrollView(
@@ -46,7 +41,7 @@ class HomePage extends StatelessWidget {
                   const SizedBox(height: 20),
                   Text('Technologies',
                       style: Theme.of(context).textTheme.displaySmall),
-                      SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
